@@ -7,90 +7,102 @@
 <body>
     <h1>Encoder</h1>
 
+
+    <label for="encoder">Encoder</label>
+    <br>
+    <input type="text" required placeholder="Texto a encriptar!!">
+    <br>
+    <button type="submit" id="btn_encoder">Encriptar</button>
+    <button type="submit" id="btn_encoder">Desencriptar</button>
+    <br>
+    <textarea name="result" id="result" cols="30" rows="10" placeholder="Ningun mensaje fue encontrado!!"></textarea>
+
+<br>
+<br>
     <script> 
-        let words = "fenterlimescimesdaidenters poberr enternfrenterntair enterstenter dentersaifimesober y haibenterrlober cobernclufatimesdober cobern enterximestober!"
-        let encoder = "Alvaro Arce ";
-    
+            let words = "fenterlimescimesdaidenters poberr enternfrenterntair enterstenter dentersaifimesober y haibenterrlober cobernclufatimesdober cobern enterximestober!"
+            let encoder = "Alvaro Arce ";
+        
 
-    function encoderWords(encoder){
+        function encoderWords(encoder){
 
-        for(var i = 0; i < encoder.length; i++) {
-            let wordEncoder = encoder.charAt(i).toLowerCase();
+            for(var i = 0; i < encoder.length; i++) {
+                let wordEncoder = encoder.charAt(i).toLowerCase();
 
-            if(wordEncoder === "a"){
-                wordEncoder = "ai";
+                if(wordEncoder === "a"){
+                    wordEncoder = "ai";
 
+                };
+
+                if(wordEncoder === "e"){
+                    wordEncoder = "enter";
+                };
+                
+                if(wordEncoder === "i"){
+                    wordEncoder = "imes";
+                };
+
+                if(wordEncoder === "o"){
+                    wordEncoder = "ober";
+                };
+
+                if(wordEncoder === "u"){
+                    wordEncoder = "ufat";
+                };
+
+                console.log(words);
+                document.write(wordEncoder);
             };
-
-            if(wordEncoder === "e"){
-                wordEncoder = "enter";
-            };
-            
-            if(wordEncoder === "i"){
-                wordEncoder = "imes";
-            };
-
-            if(wordEncoder === "o"){
-                wordEncoder = "ober";
-            };
-
-            if(wordEncoder === "u"){
-                wordEncoder = "ufat";
-            };
-
-            console.log(words);
-            document.write(wordEncoder);
-        };
-    };
-
-    function decryptWords(words){
-        for(var i = 0; i < words.length; i++) {
-            let wordEncoder = words.charAt(i).toLowerCase();
-
-            if(wordEncoder === "a"){
-                console.log(wordEncoder);
-                i++;
-                console.log(wordEncoder);
-
-            };
-
-            if(wordEncoder === "e"){
-                console.log(wordEncoder);
-                i = i + 4;
-                console.log(wordEncoder);
-
-            };
-
-            if(wordEncoder === "i"){
-                console.log(wordEncoder);
-                i = i + 3;
-                console.log(wordEncoder);
-
-            };
-
-            if(wordEncoder === "o"){
-                console.log(wordEncoder);
-                i = i + 3;
-                console.log(wordEncoder);
-
-            };
-
-            if(wordEncoder === "u"){
-                console.log(wordEncoder);
-                i = i + 3;
-                console.log(wordEncoder);
-
-            };
-
-            console.log(words);
-            document.write(wordEncoder);
         };
 
-    };
+        function decryptWords(words){
+            for(var i = 0; i < words.length; i++) {
+                let wordEncoder = words.charAt(i).toLowerCase();
 
-    encoderWords(encoder);
-    document.write("<br>")
-    decryptWords(words);
+                if(wordEncoder === "a"){
+                    console.log(wordEncoder);
+                    i++;
+                    console.log(wordEncoder);
+
+                };
+
+                if(wordEncoder === "e"){
+                    console.log(wordEncoder);
+                    i = i + 4;
+                    console.log(wordEncoder);
+
+                };
+
+                if(wordEncoder === "i"){
+                    console.log(wordEncoder);
+                    i = i + 3;
+                    console.log(wordEncoder);
+
+                };
+
+                if(wordEncoder === "o"){
+                    console.log(wordEncoder);
+                    i = i + 3;
+                    console.log(wordEncoder);
+
+                };
+
+                if(wordEncoder === "u"){
+                    console.log(wordEncoder);
+                    i = i + 3;
+                    console.log(wordEncoder);
+
+                };
+
+                console.log(words);
+                document.write(wordEncoder);
+            };
+
+        };
+
+        encoderWords(encoder);
+        document.write("<br>")
+        decryptWords(words);
 
 
 
