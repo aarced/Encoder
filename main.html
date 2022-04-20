@@ -7,15 +7,15 @@
 <body>
     <h1>Encoder</h1>
 
-    <script>
-        let words = "Alvaro Arce"
-        let encoder = " ";
+    <script> 
+        let words = "fenterlimescimesdaidenters poberr enternfrenterntair enterstenter dentersaifimesober y haibenterrlober cobernclufatimesdober cobern enterximestober!"
+        let encoder = "Alvaro Arce ";
     
 
-    function encoderWords(words){
+    function encoderWords(encoder){
 
-        for(var i = 0; i < words.length; i++) {
-            let wordEncoder = words.charAt(i).toLowerCase();
+        for(var i = 0; i < encoder.length; i++) {
+            let wordEncoder = encoder.charAt(i).toLowerCase();
 
             if(wordEncoder === "a"){
                 wordEncoder = "ai";
@@ -44,11 +44,51 @@
     };
 
     function decryptWords(words){
-        document.write(words);
+        for(var i = 0; i < words.length; i++) {
+            let wordEncoder = words.charAt(i).toLowerCase();
+
+            if(wordEncoder === "a"){
+                console.log(wordEncoder);
+                i++;
+                console.log(wordEncoder);
+
+            };
+
+            if(wordEncoder === "e"){
+                console.log(wordEncoder);
+                i = i + 4;
+                console.log(wordEncoder);
+
+            };
+
+            if(wordEncoder === "i"){
+                console.log(wordEncoder);
+                i = i + 3;
+                console.log(wordEncoder);
+
+            };
+
+            if(wordEncoder === "o"){
+                console.log(wordEncoder);
+                i = i + 3;
+                console.log(wordEncoder);
+
+            };
+
+            if(wordEncoder === "u"){
+                console.log(wordEncoder);
+                i = i + 3;
+                console.log(wordEncoder);
+
+            };
+
+            console.log(words);
+            document.write(wordEncoder);
+        };
 
     };
 
-    encoderWords(words);
+    encoderWords(encoder);
     document.write("<br>")
     decryptWords(words);
 
