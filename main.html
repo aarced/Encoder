@@ -2,11 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Encoder</title>
 </head>
 <body>
+    <h1>Encoder</h1>
+
+    <script>
+        let words = "Alvaro Arce"
+        let encoder = " ";
     
+
+    function encoderWords(words){
+
+        for(var i = 0; i < words.length; i++) {
+            let wordEncoder = words.charAt(i).toLowerCase();
+
+            if(wordEncoder === "a"){
+                wordEncoder = "ai";
+
+            };
+
+            if(wordEncoder === "e"){
+                wordEncoder = "enter";
+            };
+            
+            if(wordEncoder === "i"){
+                wordEncoder = "imes";
+            };
+
+            if(wordEncoder === "o"){
+                wordEncoder = "ober";
+            };
+
+            if(wordEncoder === "u"){
+                wordEncoder = "ufat";
+            };
+
+            console.log(words);
+            document.write(wordEncoder);
+        };
+    };
+
+    function decryptWords(words){
+        document.write(words);
+
+    };
+
+    encoderWords(words);
+    document.write("<br>")
+    decryptWords(words);
+
+
+
+    </script>
 </body>
 </html>
